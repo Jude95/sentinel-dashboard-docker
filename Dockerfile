@@ -10,7 +10,7 @@ RUN adduser -S sentinel && \
     echo "Asia/Shanghai" >  /etc/timezone && \
     rm -rf /var/cache/apk/* && \
     sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories && \
-    wget -O sentinel-dashboard.jar "https://github.com/alibaba/Sentinel/releases/download/${SENTINEL_VERSION}/sentinel-dashboard-${SENTINEL_VERSION}.jar"
+    wget -O sentinel-dashboard.jar "https://github.com/alibaba/Sentinel/releases/download/v${SENTINEL_VERSION}/sentinel-dashboard-${SENTINEL_VERSION}.jar"
 
 USER sentinel
 
